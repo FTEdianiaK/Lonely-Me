@@ -1,0 +1,67 @@
+BITSYMUSE
+	// Put entries in this list for each audio file you want to use
+	// the key will be the id needed to play it in dialog tags and the musicByRoom options below,
+	// and the value will be the properties of the corresponding <audio> tag (e.g. src, loop, volume)
+	// `src` can be either a string, or an array of strings (to support fallbacks in different formats)
+	// Note: you can add <audio> tags to the html manually if you prefer
+	audio: {
+		'caveCheery': { src: ['./audio/mp3/caveCheery.mp3', './audio/ogg/caveCheery.ogg'], loop: true },
+		'caveGloomy': { src: ['./audio/mp3/caveGloomy.mp3', './audio/ogg/caveGloomy.ogg'], loop: true },
+		'credits': { src: ['./audio/mp3/credits.mp3', './audio/ogg/credits.ogg'], loop: true },
+		'house': { src: ['./audio/mp3/house.mp3', './audio/ogg/house.ogg'], loop: true },
+		'journalCheery': { src: ['./audio/mp3/journalCheery.mp3', './audio/ogg/journalCheery.ogg'], loop: true },
+		'journalGloomy': { src: ['./audio/mp3/journalGloomy.mp3', './audio/ogg/journalGloomy.ogg'], loop: true },
+		'outsideCheery': { src: ['./audio/mp3/outsideCheery.mp3', './audio/ogg/outsideCheery.ogg'], loop: true },
+		'outsideGloomy': { src: ['./audio/mp3/outsideGloomy.mp3', './audio/ogg/outsideGloomy.ogg'], loop: true },
+		'reflections': { src: ['./audio/mp3/reflections.mp3', './audio/ogg/reflections.ogg'], loop: true },
+		'crash': { src: ['./audio/mp3/Scrash.mp3', './audio/ogg/Scrash.ogg'], volume: 0.5 },
+		'launch': { src: ['./audio/mp3/Slaunch.mp3', './audio/ogg/Slaunch.ogg'], volume: 0.5 },
+	},
+	// Put entries in this list for every room ID or name that will change the music
+	// If the player moves between rooms with the same audio ID, the music keeps playing seamlessly.
+	// Undefined rooms will keep playing whatever music they were last playing
+	musicByRoom: {
+		0: 'house',
+		1: 'outsideCheery',
+		3: 'S',
+		4: 'outsideCheery',
+		5: 'outsideCheery',
+		6: 'outsideCheery',
+		7: 'outsideCheery',
+		8: 'caveCheery',
+		9: 'outsideGloomy',
+		a: 'outsideGloomy',
+		b: 'caveGloomy',
+		c: 'reflections',
+		d: 'outsideGloomy',
+		f: 'caveGloomy',
+		g: 'outsideGloomy',
+		h: 'S',
+	},
+	silenceId: 'S', // Use this song ID to make a room fall silent.
+	resume: false, // If true, songs will pause/resume on change; otherwise, they'll stop/play (doesn't affect sound effects)
+
+CLOSE ON ENDING
+
+DYNAMIC BACKGROUND
+	// which palette colour to use for the background
+	// 	0 = background
+	// 	1 = tile
+	// 	2 = sprite
+	default: 0,
+	// entries here will override the default for the given room
+	byRoom: {
+	},
+
+FAVICON FROM SPRITE
+	SPRITE_NAME: '', // Sprite name as entered in editor (not case-sensitive). Defaults to player avatar.
+	PALETTE_ID: 0, // Palette name or number to draw colors from. (Names not case-sensitive.)
+	BG_COLOR_NUM: 0, // Favicon background color in palette. 0 = BG, 1 = Tile, 2 = Sprite.
+	FG_COLOR_NUM: 2, // Favicon sprite color in palette. 0 = BG, 1 = Tile, 2 = Sprite.
+	PIXEL_PADDING: 1, // Padding around sprite, in Bitsy pixel units.
+	ROUNDED_CORNERS: true, // Should the favicon have rounded corners? (Suggest margin 2px if rounding.)
+	FRAME_DELAY: 400, // Frame change interval (ms) if sprite is animated. Use `Infinity` to disable.
+
+LONG DIALOG
+	minRows: 2,
+	maxRows: 6,
