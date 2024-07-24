@@ -27,7 +27,7 @@ Embark on a journey across the (side) planet of Myesic and listen to the tale of
 - Open using [Bitsy](https://ledoux.itch.io/bitsy).
 
 ### Known Bugs
-- None yet... Report them [here](https://github.com/FTEdianiaK/library-parrotex/issues).
+- None yet... Report them [here](https://github.com/FTEdianiaK/Lonely-Me/issues).
 
 ### Credits
 
